@@ -78,14 +78,14 @@ public class RegionsListAdapter extends RecyclerView.Adapter<RegionsListAdapter.
         List<Language> languages = regionDetail.getLanguages();
         String languageString = languages.get(0).toString();
         for (int i = 1; i < languages.size(); i++) {
-            languageString += ", " + languages.get(i).toString();
+            languageString += "\n"+", " + languages.get(i).toString();
         }
         String borderString;
         List<String> borders = regionDetail.getBorders();
         try {
              borderString = borders.get(0);
             for (int i = 1; i < borders.size(); i++) {
-                borderString += ", " + borders.get(i);
+                borderString += "\n"+", " + borders.get(i);
             }
         }catch (IndexOutOfBoundsException e){
              borderString=null;
