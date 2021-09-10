@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                                     entity.getFlag()
                     ));
                 }
+                binding.listRegions.setAdapter(new RegionsListAdapter(MainActivity.this, regions));
             }
         });
     }
