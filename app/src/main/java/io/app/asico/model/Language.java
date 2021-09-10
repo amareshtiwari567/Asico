@@ -1,15 +1,9 @@
 package io.app.asico.model;
 
-import com.google.gson.annotations.SerializedName;
-
 public class Language {
-    @SerializedName("iso639_1")
     public String iso639_1;
-    @SerializedName("iso639_2")
     public String iso639_2;
-    @SerializedName("name")
     public String name;
-    @SerializedName("nativeName")
     public String nativeName;
 
     public Language(String iso639_1, String iso639_2, String name, String nativeName) {
@@ -49,5 +43,10 @@ public class Language {
 
     public void setNativeName(String nativeName) {
         this.nativeName = nativeName;
+    }
+
+    @Override
+    public String toString() {
+        return name + " (" + nativeName + ")";
     }
 }

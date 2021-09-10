@@ -18,11 +18,11 @@ public class Region {
     @SerializedName("population")
     private String population;
     @SerializedName("borders")
-    private List<Border> borders;
+    private List<String> borders;
     @SerializedName("languages")
     private List<Language> languages;
 
-    public Region(String name, String capital, String flag, String region, String subregion, String population, List<Border> borders, List<Language> languages) {
+    public Region(String name, String capital, String region, String subregion, String population, List<String> borders, List<Language> languages, String flag) {
         this.name = name;
         this.capital = capital;
         this.flag = flag;
@@ -81,11 +81,11 @@ public class Region {
         this.population = population;
     }
 
-    public List<Border> getBorders() {
+    public List<String> getBorders() {
         return borders;
     }
 
-    public void setBorders(List<Border> borders) {
+    public void setBorders(List<String> borders) {
         this.borders = borders;
     }
 
